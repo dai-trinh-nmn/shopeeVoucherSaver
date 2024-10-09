@@ -52,9 +52,22 @@ javascript:(function() {
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4) {
             if (xhr.status == 200) {
-                alert("Vốt chờ đã được lưu! " + xhr.responseText);
+                try {
+                    const response = JSON.parse(xhr.responseText);
+                    console.log(xhr.responseText);
+
+                    if (response.error === 0 && response.responses[0].error === 0) {
+                        alert("Vốt chờ đã được lưu thành công!");
+                    } else if (response.error === 0 && response.responses[0].error === 5) {
+                        alert("Vốt chờ đã được lưu trước đó!");
+                    } else {
+                        handleError(response.error);
+                    }
+                } catch(e) {
+                    alert("Lỗi phân tích phản hồi!");
+                }
             } else {
-                alert("Vốt chờ lưu thất bại! Mã trạng thái: " + xhr.status + ", Nội dung trả về: " + xhr.responseText);
+                alert("Gửi request thất bại!");
             }
         }
     };
@@ -72,4 +85,18 @@ javascript:(function() {
 
     console.log("Request Body:", JSON.stringify(requestBody));
     xhr.send(JSON.stringify(requestBody));
+
+    function handleError(errorCode) {
+        switch (errorCode) {
+            case 19:
+                alert("Chưa đăng nhập!");
+                break;
+            case 10002:
+                alert("Invalid Input!");
+                break;
+            default:
+                alert("Lỗi chưa xác định!");
+                break;
+        }
+    }
 })();
