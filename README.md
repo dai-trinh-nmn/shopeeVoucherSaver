@@ -1,4 +1,4 @@
-# Bookmarklet lưu voucher Shopee Live/Shopee Video vào tài khoản bằng link voucher
+# Bookmarklet lưu voucher Shopee vào tài khoản bằng link voucher
 
 ## Hướng dẫn tạo bookmarklet
 
