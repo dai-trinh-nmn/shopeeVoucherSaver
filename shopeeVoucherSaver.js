@@ -60,11 +60,11 @@ javascript:(function() {
                         console.log(xhr.responseText);
     
                         if (response.error === 0 && response.responses[0].error === 0) {
-                            alert("Vốt chờ đã được lưu thành công!");
+                            alert(`Vốt chờ ${voucherCode} đã được lưu thành công!`);
                         } else if (response.error === 0 && response.responses[0].error === 5) {
-                            alert("Vốt chờ đã được lưu trước đó!");
+                            alert(`Vốt chờ ${voucherCode} đã được lưu trước đó!`);
                         } else if (response.error === 0 && response.responses[0].error === 14){
-                            alert("Vốt chờ này không thể lưu trên tài khoản của bạn!");
+                            alert(`Vốt chờ ${voucherCode} này không thể lưu trên tài khoản của bạn!`);
                         } else {
                             handleError(response.error);
                         }
