@@ -19,3 +19,5 @@ Nhấn vào bookmarklet bạn đã tạo, paste link voucher bạn có vào và 
 ![1728475601835](image/README/1728475601835.png)
 
 Lưu ý: Không phải tất cả voucher trên Shopee đều có thể lưu được bằng cách này. Một số voucher có thể lưu được bằng cách này gồm: Voucher thăng hạng kim cương (Giảm 30% tối đa 50k), Voucher nhận được khi lướt Shopee Video đủ thời gian và mở rương may mắn nhận được (hiện tại voucher này đã bị siết)
+
+Update 08/2025: Mã thăng hạng Kim Cương đã bị fix, hiện tại chỉ những tài khoản hạng Kim Cương mới có thể lưu được thay vì tất cả tài khoản như trước
